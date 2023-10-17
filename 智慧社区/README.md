@@ -1,2 +1,2 @@
-# innovation-Competition
-科创类比赛项目文档，包含程序以及说明
+# 智慧社区
+## arduino主控，ai摄像头识别电动车，检测火灾、求助
