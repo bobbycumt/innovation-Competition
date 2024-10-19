@@ -5,12 +5,15 @@ import utime
 import ujson
 # import ssd1306
 from umqtt.simple import MQTTClient
+import onewire
+from ds18x20 import DS18X20
 
 hj=ADC(34)
 level=ADC(35)
 pmp1 = Pin(12, Pin.OUT)
 pmp2 = Pin(13, Pin.OUT)
 motor = Pin(14, Pin.OUT)
+OneWirePin = 15
 
 # ssid='CU_future'
 # psw='13582579999'
@@ -28,6 +31,25 @@ TOPIC1 = "attributes/push"
 f=0
 state=0
 utime.sleep(2)
+
+def readDS18x20(): 
+    # the device is on GPIO22
+    dat = Pin(OneWirePin)
+    # create the onewire object
+    ds = DS18X20(onewire.OneWire(dat))
+    # scan for devices on the bus
+    roms = ds.scan()# 扫描挂载在单总线上的ds18B20设备
+    ds.convert_temp() # 数据转换
+    utime.sleep_ms(750)
+    values = []   
+
+    for rom in roms:
+        values.append(ds.read_temp(rom))
+        
+    # values.append(u"℃")
+#     print(values,r"℃")
+    return values
+
 def do_connect():
     import network
     wlan = network.WLAN(network.STA_IF)
@@ -72,10 +94,11 @@ def main():
     while 1:
         client.check_msg()
         utime.sleep_ms(200)
+        t=readDS18x20()[0];
         cnt+=1
         if cnt==50:
             msg_dict = {
-                'turbidity': hj.read(),'level': level.read()
+                'turbidity': hj.read(),'level': level.read(),'temperature':t
             }
             msg = ujson.dumps(msg_dict)
             result = client.publish(TOPIC, msg)
@@ -87,3 +110,4 @@ def main():
 
 if __name__=='__main__':
     main()
+
