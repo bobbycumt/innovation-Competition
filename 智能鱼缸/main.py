@@ -14,11 +14,12 @@ pmp1 = Pin(12, Pin.OUT)
 pmp2 = Pin(13, Pin.OUT)
 motor = Pin(14, Pin.OUT)
 OneWirePin = 15
+led = Pin(16,Pin.OUT)
 
 # ssid='CU_future'
 # psw='13582579999'
-ssid = 'bbhh'
-psw = 'lb19850922'
+ssid = 'LEGOEducation'
+psw = 'lego2232888'
 
 SERVER = "bj-2-mqtt.iot-api.com"
 PORT = 1883
@@ -80,7 +81,8 @@ def on_message(topic, msg):
         pmp2.value(d["pump2"])
     elif k[0]=='motor':   
         motor.value(d["motor"])
-        
+    elif k[0]=='led':   
+        led.value(d["led"])        
 def subscribe(client):
     client.set_callback(on_message)
     client.subscribe(TOPIC1)
