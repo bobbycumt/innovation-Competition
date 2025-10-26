@@ -1,0 +1,51 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Pos	KEYWORD1
+IOFunction	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+Dobot_Init	KEYWORD2
+Dobot_GetDeviceTimeEx	KEYWORD2
+Dobot_SetDeviceWIthLEx	KEYWORD2
+Dobot_SetHOMECmdEx	KEYWORD2
+Dobot_GetPoseEx	KEYWORD2
+Dobot_SetEndEffectorParamsEx	KEYWORD2
+Dobot_SetEndEffectorLaserEx	KEYWORD2
+Dobot_SetEndEffectorSuctionCupEx	KEYWORD2
+Dobot_SetEndEffectorGripperEx	KEYWORD2
+Dobot_SetJOGCommonParamsEx	KEYWORD2
+Dobot_SetJOGJointParamsEx	KEYWORD2
+Dobot_SetJOGCmdEx	KEYWORD2
+Dobot_SetPTPCommonParamsEx	KEYWORD2
+Dobot_SetPTPJointParamsEx	KEYWORD2
+Dobot_SetPTPLParamsEx	KEYWORD2
+Dobot_SetPTPJumpParamsEx	KEYWORD2
+Dobot_SetPTPCmdEx	KEYWORD2
+Dobot_SetPTPWithLCmdEx	KEYWORD2
+Dobot_SetIOMultiplexingEx	KEYWORD2
+Dobot_SetIODOEx	KEYWORD2
+Dobot_SetIOPWMEx	KEYWORD2
+Dobot_GetIODIEx	KEYWORD2
+Dobot_GetIOADCEx	KEYWORD2
+Dobot_SetEMotorEx	KEYWORD2
+Dobot_SetEMotorSEx	KEYWORD2
+Dobot_SetColorSensorEx	KEYWORD2
+Dobot_GetColorSensorEx	KEYWORD2
+Dobot_SetIRSwitchEx	KEYWORD2
+GetIRSwitchEx	KEYWORD2
+Dobot_SetLostStepSetEx	KEYWORD2
+Dobot_SetLostStepCmdEx	KEYWORD2
+Dobot_SetMotorPulseEx	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
