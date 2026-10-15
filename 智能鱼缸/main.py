@@ -23,9 +23,9 @@ psw = 'lego2232888'
 
 SERVER = "bj-2-mqtt.iot-api.com"
 PORT = 1883
-CLIENT_ID = 'sr6avzfo'
-USERNAME = '2dkx0lasne3bi7ak'
-PASSWORD = '85mf2Hkk0p'
+CLIENT_ID = 'bk7jilrw'
+USERNAME = '0gp3tb236jver79m'
+PASSWORD = 'FBtp2IwgGo'
 TOPIC = "attributes"
 TOPIC1 = "attributes/push"
 
