@@ -4,3 +4,6 @@
 # ThingsCloud
 ## 账号：lb_ssoier1@163.com   密码：1q2w3e
 ## 手机热点设置wifi名称：LEGOEducation    密码:lego2232888
+## 小程序扫码
+<img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/a2acaae8-f7f0-4973-806e-cd139f720534" />
+## 小程序登录账号密码：zhengqilin   1q2w3e
